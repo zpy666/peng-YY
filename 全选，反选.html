@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{margin: 0;
+			padding: 0;}
+			#panel
+			{
+				width: 400px;
+				margin: 200px auto;
+				box-shadow: 0 0 10px #000000;
+				padding: 20px;
+				background-image: url(img/9deded7ec8c740338edff27d204d8690.jpeg);
+				background-size: 100% 100%;
+			}
+			.panel-header{text-align: center;}
+			.panel-footer{text-align: center ;}
+			.panel-content{color: white;}
+			button{margin-left:20px ;
+			margin-top: 10px;}
+			
+			
+		</style>
+	</head>
+	<body>
+		<div id="panel">
+			<section class="panel-header">
+				<h2>歌曲排行榜</h2>
+				<hr>
+			</section>
+			<section class="panel-content">
+				<input type="checkbox">那就这样吧<br>
+				<input type="checkbox">老街<br>
+				<input type="checkbox">陷阱<br>
+				<input type="checkbox">只要你还好<br>
+				<input type="checkbox">旅行笔记<br>
+				<input type="checkbox">一个人的北京<br>
+			</section>
+			<section class="panel-footer">
+				<hr>
+				<button id="allSelect">全选</button>
+				<button id="cancelSelect">不选</button>
+				<button id="reverSelect">反选</button>
+			</section>
+		</div>
+		<script>
+			window.onload = function(){
+			var inputs = document.getElementsByTagName("input")
+				/*var a =[];
+				for(i=0;i<inputs.length;i++){
+					
+					
+					if(inputs[i].type=='checkbox'){
+						a.push(inputs[i])
+					}
+					
+				}
+				console.log(a)*/
+				allSelect.onclick = function(){
+					for(var i=0; i<inputs.length; i++){
+						inputs[i].checked = true;
+						
+					}
+				}
+				cancelSelect.onclick = function(){
+					for(var i=0; i<inputs.length; i++){
+						inputs[i].checked = false;
+						
+					}
+				}
+				reverSelect.onclick = function(){
+					for(var i=0; i<inputs.length; i++){
+						inputs[i].checked = !inputs[i].checked
+						
+					}
+				}
+			}
+		</script>>
+	</body>
+</html>
